@@ -33,3 +33,20 @@ To convert your Zoom chat transcript to CSV format:
 4. The script will process the original text file and create a CSV version. The original text file will be replaced by the new CSV file, which will have the same name as the original file, but with a .csv extension.
 
 Please note that the script only processes lines in the transcript that contain a timestamp and a message. All other lines will be ignored.
+
+### Excel issues with output file and Emojis
+
+When opening in Excel, encoding issues can sometimes happen, particularly with emojis. Excel is notorious for handling UTF-8 encoding poorly.
+
+Here's a workaround: Import the data into Excel; don't just open the file. 
+
+Here's how:
+
+1. Open Excel and create a new spreadsheet.
+2. Go to the Data tab and click From Text.
+3. Navigate to your CSV file and click Import.
+4. In the Text Import Wizard, choose the Delimited option, then click Next.
+5. Check the Comma box, then click Next.
+6. Select the column with emojis and change the Column data format to Text, then click Finish.
+
+Or use Apple Numbers 😉
